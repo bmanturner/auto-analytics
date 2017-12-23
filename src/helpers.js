@@ -10,7 +10,7 @@ import analytics from '../vendor/analytics.min';
 //
 
 const trackEventWhenReady = (...args) =>
-  analytics.ready(() => analytics.track.apply(this, args));
+  analytics.ready(() => { console.log('tracking event'); return analytics.track.apply(this, args); });
 
 const trackPageWhenReady = (...args) =>
   analytics.ready(() => analytics.page.apply(this, args));
