@@ -24,8 +24,9 @@ var trackEventWhenReady = function trackEventWhenReady() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
   }
-
+  console.log('track event when ready called');
   return _analytics2.default.ready(function () {
+    console.log('analytics ready');
     return _analytics2.default.track.apply(undefined, args);
   });
 };
